@@ -19,12 +19,7 @@ class AlchemicalReduction
   end
 
   def shortest
-    alphabet = ('a'..'z')
-    values = []
-    alphabet.each do |letter|
-      values.push polymer(letter)
-    end
-    values.min
+    ('a'..'z').map { |letter| polymer(letter) }.min
   end
 
 end
